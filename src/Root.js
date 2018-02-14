@@ -15,6 +15,7 @@ const Root = () =>
     <Router history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={Landing} />
+        <Route path="/Callback" component={Callback} />
       </Route>
     </Router>
   </Provider>;
