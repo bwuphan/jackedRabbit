@@ -4,7 +4,8 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import configureStore from './configureStore';
 import { syncHistoryWithStore } from 'react-router-redux';
 import App from './App';
-import Landing from './components/Landing/Landing.js';
+import Landing from './components/Landing/Landing';
+import Callback from './components/Callback/Callback';
 
 const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
