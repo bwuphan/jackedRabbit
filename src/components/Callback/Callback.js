@@ -5,9 +5,11 @@ export default class Callback extends Component {
     super(props);
   }
 
-  return() {
-    <div>
-      <h2>Loading</h2>
-    </div>
+  render() {
+    return (
+      <div>
+        <h2>Loading</h2>
+      </div>
+    );
   }
 }
