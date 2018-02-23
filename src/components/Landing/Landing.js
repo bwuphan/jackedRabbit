@@ -6,11 +6,6 @@ export default class Landing extends Component {
   constructor(props) {
     super(props);
     this.auth = new Auth();
-
-    // const handleAuthentication = ({location}) => {
-    // if (/access_token|id_token|error/.test(location.hash)) {
-    //   auth.handleAuthentication();
-    // }
   }
 
   login() {
