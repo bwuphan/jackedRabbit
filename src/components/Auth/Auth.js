@@ -1,5 +1,6 @@
 import auth0 from 'auth0-js';
 import { AUTH_CONFIG } from './auth0-variables';
+import { browserHistory } from 'react-router';
 
 export default class Auth {
   auth0 = new auth0.WebAuth({
@@ -23,15 +24,15 @@ export default class Auth {
   }
 
   handleAuthentication() {
-    console.log('HANDLE AUTH')
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult);
         console.log('logged in');
+        browserHistory.push('/');
       } else if (err) {
-
         console.log(err);
         alert(`Error: ${err.error}. Check the console for further details.`);
+        browserHistory.push('/');
       }
     });
   }
